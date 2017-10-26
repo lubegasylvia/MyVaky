@@ -1,0 +1,15 @@
+<div class= "form-container" id="toolbar">
+<header [@fallIn]="state">
+  <button (click)="logout()" class="basic-btn">Profile</button>
+  <button (click)="logout()" class="basic-btn">Home</button>
+  <button (click)="logout()" class="basic-btn">Logout</button>
+</header>
+<div id="page" [@moveInLeft]="state">
+  <h2>Hi {{ currentUser.displayName}}!</h2>
+  <h2>Hi {{ currentUser.email}}!</h2>
+  <h2>Hi {{ currentUser.photoUrl}}!</h2>
+  
+  <!-- <img src="" -->
+</div>
+
+</div>
