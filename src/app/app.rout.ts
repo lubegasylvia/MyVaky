@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './auth.service';
 import { SignupComponent } from './signup/signup.component';
 import { EmailComponent } from './email/email.component';
+import { ProfileChangeComponent} from './profile-change/profile-change.component';
 
 
 
@@ -15,8 +16,9 @@ export const router: Routes = [
     {path: 'login', component: LoginComponent },
     {path: 'signup', component: SignupComponent },
     {path: 'login-email', component: EmailComponent },
-    {path: 'profile',component: ProfileComponent, canActivate:[AuthGuard] }
-
+    {path: 'profile',component: ProfileComponent, canActivate:[AuthGuard] },
+    {path: 'profile-change', component: ProfileChangeComponent }
+    
 ]
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router);

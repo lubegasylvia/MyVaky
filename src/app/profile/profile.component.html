@@ -4,11 +4,22 @@
   <button (click)="logout()" class="basic-btn">Home</button>
   <button (click)="logout()" class="basic-btn">Logout</button>
 </header>
+
 <div id="page" [@moveInLeft]="state">
-  <h2>Hi {{ currentUser.displayName}}!</h2>
-  <h2>Hi {{ currentUser.email}}!</h2>
-  <h2>Hi {{ currentUser.photoUrl}}!</h2>
-  
+
+<h1>Your Profile</h1>
+<h2>Hi {{ currentUser.displayName}}!</h2>
+<h2>Hi {{ currentUser.email}}!</h2>
+<h2>Hi {{ currentUser.photoUrl}}!</h2>
+<!-- <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+<form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+
+    <input type="text" placeholder="YouName" (ngModel)="formData.name" name="name" class="txt" required>
+    <input type="text" placeholder="PofilePicture" (ngModel)="formData.pictureUrl" name="pictureUrl" class="txt" required>
+
+    <button type="submit" [disabled]="!formData.form.valid" class="basic-btn">Save Profile</button>
+</form> -->
+
   <!-- <img src="" -->
 </div>
 

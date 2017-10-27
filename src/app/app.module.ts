@@ -17,6 +17,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './auth.service';
 import { routes } from './app.rout';
+import { ProfileChangeComponent } from './profile-change/profile-change.component';
 
 
 export const firebaseConfig = {
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     LoginComponent,
     EmailComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProfileChangeComponent
    
     
   ],

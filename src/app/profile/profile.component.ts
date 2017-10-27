@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
 
   currentUser: firebase.User;
   state:string = '';
-  
+  error:string= '';
   constructor(public af: AngularFireAuth, private router: Router) { 
 
     this.af.auth.onAuthStateChanged(auth => {
@@ -25,8 +25,8 @@ export class ProfileComponent implements OnInit {
       }
     });
   }
-
-  logout(){
+ 
+  logout(){ 
     this.af.auth.signOut();
     this.router.navigateByUrl('/login');  
   }
