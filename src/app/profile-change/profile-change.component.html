@@ -1,11 +1,11 @@
 <div class= "form-container" id="toolbar">
-    <header [@fallIn]="state">
+    <header>
       <button (click)="logout()" class="basic-btn">Profile Change</button>
       <!-- <button (click)="logout()" class="basic-btn">Home</button>
       <button (click)="logout()" class="basic-btn">Logout</button> -->
     </header>
     
-    <div id="page" [@moveInLeft]="state">
+    <!-- <div id="page" [@moveInLeft]="state"> -->
     
     <h3>Your Profile</h3>
     <h2>Hi {{ currentUser.displayName}}!</h2>
@@ -13,7 +13,7 @@
     <h2>Hi {{ currentUser.photoUrl}}!</h2>
     
     <h3>Change Your Profile</h3>
-    <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+    <span class="error" *ngIf="error">{{ error }}</span>
     <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
     
         <input type="text" placeholder="YouName" (ngModel)="formData.name" name="name" class="txt" required>
@@ -23,7 +23,7 @@
     </form>
     
       <!-- <img src="" -->
-    </div>
+    <!-- </div> -->
     
     </div>
     

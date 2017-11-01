@@ -12,38 +12,15 @@ import * as firebase from 'firebase/app';
 export class AppComponent {
   title = 'app';
   user: Observable<firebase.User>;
-  
-  itemsRef: AngularFireList<any>;
-  items: Observable<any[]>;
 
   msgVal: string = '';
 
   constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
-    this.itemsRef = af.list('/messages');
-
-    // Use snapshotChanges().map() to store the key
-    this.items = this.itemsRef.snapshotChanges().map(changes => {
-      return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
-    });
-    
-    // , {
-    //   query: {
-    //     limitToLast: 50
-    //   }
-    // }
     this.user = this.afAuth.authState;
-
   }
+
   login() {
     this.afAuth.auth.signInAnonymously();
   }
 
-  logout() {
-      this.afAuth.auth.signOut();
-  }
-
-  Send(desc: string) {
-      this.itemsRef.push({ message: desc});
-      this.msgVal = '';
-  }
 }

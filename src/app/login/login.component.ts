@@ -3,14 +3,13 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase/app';
-import { moveIn } from '../router.animation';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  animations:[moveIn()],
-  host:{'[@moveIn]':''}
+  // host:{'[@moveIn]':''}
 })
 export class LoginComponent implements OnInit {
   error: any;

@@ -16,9 +16,10 @@ export class AuthGuard implements CanActivate{
             .take(1)
             .map(state => !!state)
             .do(authenticated => {
-        if
-            (!authenticated) this.router.navigate([ '/login' ]);
-         })
+                if (!authenticated) {
+                    this.router.navigate([ '/login' ]);
+                }
+             })
     }
     // auth0 = new auth.WebAuth({
     //     // ...
@@ -44,7 +45,3 @@ export class AuthGuard implements CanActivate{
     //   }
       
 }
-
-
-
-

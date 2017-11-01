@@ -3,14 +3,13 @@ import { Component, OnInit } from '@angular/core';
 // import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
-import { moveIn, fallIn} from '../router.animation';
+
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
-  animations:[moveIn(), fallIn()],
-  host:{'[@moveIn]':''}
+  // host:{'[@moveIn]':''}
 })
 export class SignupComponent implements OnInit {
   state:string ='';

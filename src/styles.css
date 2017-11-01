@@ -9,29 +9,24 @@ a{
 }
 .form-container {
     background:#e57373;
-    padding:4.5em;
-    width:800px;
+    padding:5.5em;
+    width:50%;
     position:fixed;  
-    left:40%;  
+    left:30%;  
     margin-left:-250px;  
-    border-radius: 15px 50px; 
-    /* margin-left: 30%;
-    margin-right: 30%; */
+    border-radius: 10px; 
+   
 }
-
-
-
 
 button {
     padding:1.3em;
     width:100%;
-    cursor:pointer;
-    margin-bottom:15px;
+    cursor:pointer; 
+    margin-bottom:20px;
     font-size:1.3em;
     border-radius:3em;
     background-color: #fffefe;
-    color: #00bcd4;
-    
+    color: #00bcd4;   
 }
 
 .basic-btn {
