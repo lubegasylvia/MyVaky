@@ -4,11 +4,11 @@ import { AngularFireAuth } from 'angularfire2/auth';
 
 
 @Component({
-  selector: 'app-manu',
-  templateUrl: './manu.component.html',
-  styleUrls: ['./manu.component.css'],
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css'],
 })
-export class ManuComponent implements OnInit {
+export class MenuComponent implements OnInit {
 
   constructor(public afAuth: AngularFireAuth, private router: Router) { }
 

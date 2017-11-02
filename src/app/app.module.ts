@@ -22,7 +22,7 @@ import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileChangeComponent } from './profile-change/profile-change.component';
-import { ManuComponent } from './manu/manu.component';
+import { MenuComponent } from './menu/menu.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyA81fDc8UMgsBf04ay-HN-ICV2VLepyTrI",
@@ -40,7 +40,7 @@ export const firebaseConfig = {
     SignupComponent,
     ProfileComponent,
     ProfileChangeComponent,
-    ManuComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,

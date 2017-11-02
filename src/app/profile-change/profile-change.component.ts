@@ -30,7 +30,7 @@ onSubmit(formData){
     this.currentUser.updateProfile({
       displayName: formData.form.value.name,
       photoURL: formData.form.value.pictureUrl
-    }).then(
+    }).then( 
       (success) =>{
         this.router.navigate(['/profile'])
       }).catch(

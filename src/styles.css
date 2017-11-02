@@ -15,12 +15,12 @@ a{
     left:30%;  
     margin-left:-250px;  
     border-radius: 10px; 
-   
+   margin-top:120px;
 }
 
 button {
     padding:1.3em;
-    width:100%;
+     width:100%; 
     cursor:pointer; 
     margin-bottom:20px;
     font-size:1.3em;

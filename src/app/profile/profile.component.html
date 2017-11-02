@@ -1,34 +1,31 @@
-<div class= "form-container" id="toolbar"> 
-    
 <mat-card class="profile-card">
-  <mat-card-header>
-    <div mat-card-avatar class="profile-header-image"></div>
-    <mat-card-title>{{ currentUser.displayName}}!</mat-card-title>
-    <mat-card-subtitle>{{ currentUser.email}}!</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="{{ currentUser.photoUrl}}" alt="{{ currentUser.displayName}}">
-  <mat-card-content>
+<mat-card-header>
+<div mat-card-avatar class="profile-header-image"></div>
+<mat-card-title>{{ currentUser.displayName}}!</mat-card-title>
+<mat-card-subtitle>{{ currentUser.email}}!</mat-card-subtitle>
+</mat-card-header>
+<img mat-card-image src="{{ currentUser.photoUrl}}" alt="{{ currentUser.displayName}}">
+<mat-card-content>
 <ul>
-    <li *ngFor="let post of posts | async">
-      <input type="text" #updatetext [value]="post.title" />
-      <button (click)="updatePost(post.key, updatetext.value)">Update</button>
-      <button (click)="deletePost(post.key)">Delete</button>
-    </li>
-  </ul>
-    <!-- <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p> -->
-  </mat-card-content>
-  <mat-card-actions>
+<li *ngFor="let post of posts | async">
+<input type="text" #updatetext [value]="post.title" />
+<button (click)="updatePost(post.key, updatetext.value)">Update</button>
+<button (click)="deletePost(post.key)">Delete</button>
+</li>
+</ul>
+<!-- <p>
+The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+bred for hunting.
+</p> -->
+</mat-card-content>
+<mat-card-actions>
 
-    <input type="text" #newPost />
-    <button mat-button (click)="addPost(newPost.value)">Add</button>
-    <button mat-button (click)="deleteEverything()">Delete All</button>
+<input type="text" #newPost />
+<button mat-button (click)="addPost(newPost.value)">Add</button>
+<button mat-button (click)="deleteEverything()">Delete All</button>
 
-    <!-- <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button> -->
-  </mat-card-actions>
+<!-- <button mat-button>LIKE</button>
+<button mat-button>SHARE</button> -->
+</mat-card-actions>
 </mat-card>
-</div>
