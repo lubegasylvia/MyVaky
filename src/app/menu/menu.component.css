@@ -1,7 +1,12 @@
 
 .basic-btn {
-    width:100px;
-    
-    margin-left:300px;
+    /* width:100px; */
     padding-right: 4em;    
+    display: inline-block; 
+    box-shadow: 0 4px #cf211f; 
+    top: 2px; 
+    
+}
+.wrapper{
+text-align: center; 
 }

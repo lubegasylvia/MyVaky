@@ -1,39 +1,36 @@
-#toolbar {
+ #toolbar {
     padding:0;
     width:60%;
-    /* margin-left:-35%; */
-}
+     margin-left:-35%; 
+} 
 
-
-
-/* .basic-btn {
-    width:100px;
+.basic-btn {
+    width:200px; 
     margin-top:0.5em;
-    margin-left:6em;
-    padding-right: 4em;
-  
-} */
+    margin-left:2em;
+    padding: 1em;
+    
+} 
 
 #page {
     padding:3em;
     margin:0;
 }
 
-/* #page img {
-    margin-top:30px;
-    margin-left: 30px;
-} */
 h3{
+    font-size: 20px;
     color: wheat;
+    font-family:"Times New Roman", Georgia, serif;
+    /* text-align: center; */
 }
 h2 {
-    font-size: 1em;
-    margin:0;
+    margin: 0;
+    padding-left:1em;
+    font-size: 24px;
+    font-family:"Times New Roman", Georgia, serif; 
     background-color: wheat;
     color: #00bcd4;
-    text-align: center; 
-    width: 30%;
-    height: 10%; 
+    /* text-align: center;  */
 }
 
 

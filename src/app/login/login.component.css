@@ -1,24 +1,32 @@
-#lock {
-    width:40%;
-    margin: 1.5em auto 4em auto;
-    display:block;
+.mat-card-title, .mat-card-subtitle {
+    font-size: 18px;
+    color: wheat;
+    font-family: Gill Sans, sans-serif;
+    font-weight:bold;
+    
 }
 
 #fb {
     /* background:#3B5998 url('assets/images/facebook.svg') no-repeat 14px 6px; */
     background-size: 47px;
     color:#00bcd4;
+    font-size:18px;
 }
 
 #google {
     border: 1px solid #95989A;
     /* background: #fff  url('assets/images/google.svg') no-repeat 25px; */
     background-size: 25px;
+    font-size:18px;
+    color:#00bcd4;
 }
 
 #email {
     /* background: #ECECEC  url('assets/images/email.svg') no-repeat 25px; */
     background-size: 25px;
+    font-size:18px;
+    color:#00bcd4;
+    
 }
 
 @media (max-width: 600px) {

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import * as firebase from 'firebase/app';
-import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 
@@ -15,12 +14,10 @@ import { Observable } from 'rxjs/Observable';
 export class ProfileComponent {
 
   currentUser: firebase.User;
-  state:string = '';
-  error:string= '';
   postsRef: AngularFireList<any>;
   posts: Observable<any[]>;
 
-  constructor(public afAuth: AngularFireAuth, public afDatabase: AngularFireDatabase, private router: Router) { 
+  constructor(public afAuth: AngularFireAuth, public afDatabase: AngularFireDatabase) { 
 
     this.afAuth.auth.onAuthStateChanged(auth => {
       if(auth){

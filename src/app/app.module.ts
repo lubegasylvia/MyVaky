@@ -40,7 +40,8 @@ export const firebaseConfig = {
     SignupComponent,
     ProfileComponent,
     ProfileChangeComponent,
-    MenuComponent
+    MenuComponent,
+    
   ],
   imports: [
     BrowserModule,
