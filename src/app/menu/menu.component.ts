@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
+import {DomSanitizer} from '@angular/platform-browser';
+import {MatIconRegistry} from '@angular/material';
+
 
 
 @Component({
@@ -10,7 +13,14 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(public afAuth: AngularFireAuth, private router: Router) { }
+  constructor(public afAuth: AngularFireAuth, private router: Router, 
+              iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+     iconRegistry.addSvgIcon(
+       'thumbs-up',
+     sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));
+   }
+
+ 
 
   goToProfile() {
     this.router.navigate([ '/profile' ]);

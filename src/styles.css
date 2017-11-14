@@ -28,6 +28,8 @@ button {
  .basic-btn {
     /* background: #00bcd4; */
     color:white;
+    box-shadow: 0 4px #cf211f;
+    border-radius: 2em;
  }
  :hover {
     color:wheat;

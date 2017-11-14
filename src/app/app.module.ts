@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import {MatButtonModule, MatCheckboxModule,} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatIconModule} from '@angular/material';
 import {MatCardModule} from '@angular/material';
 
 
@@ -23,6 +23,8 @@ import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileChangeComponent } from './profile-change/profile-change.component';
 import { MenuComponent } from './menu/menu.component';
+import { UploadFormComponent } from './uploads/upload-form/upload-form.component';
+import { UploadService } from './uploads/shared/upload.service';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyA81fDc8UMgsBf04ay-HN-ICV2VLepyTrI",
@@ -41,6 +43,7 @@ export const firebaseConfig = {
     ProfileComponent,
     ProfileChangeComponent,
     MenuComponent,
+    UploadFormComponent,
     
   ],
   imports: [
@@ -52,12 +55,12 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    MatButtonModule, MatCheckboxModule,
+    MatButtonModule, MatCheckboxModule, MatIconModule,
     MatCardModule
 
     
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, UploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

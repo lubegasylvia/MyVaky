@@ -5,6 +5,7 @@
 <span class="error" *ngIf="error">{{ error }}</span>
 <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
 
+<input type="text" placeholder="Your Name" (ngModel)="formData.email" name="name" class="txt" required>
 <input type="text" placeholder="Email adress.." (ngModel)="formData.email" name="email" class="txt" required>
 <input type="password" placeholder="Password" (ngModel)="formData.password" name="password" class="txt" required>
 
