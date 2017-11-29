@@ -25,7 +25,7 @@ export class EmailComponent implements OnInit {
           });
        }
 
-       onsubmit(formData){
+       onSubmit(formData){
         if(formData.valid){
           console.log(formData.value);
           this.af.auth.signInWithEmailAndPassword(

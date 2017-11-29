@@ -3,6 +3,7 @@ import { CanActivate, Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material';
+import * as firebase from 'firebase/app';
 
 
 
@@ -12,12 +13,22 @@ import {MatIconRegistry} from '@angular/material';
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
+  currentUser: firebase.User;
 
   constructor(public afAuth: AngularFireAuth, private router: Router, 
               iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
      iconRegistry.addSvgIcon(
        'thumbs-up',
      sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));
+
+
+    this.afAuth.auth.onAuthStateChanged(auth => {
+      if(auth){
+        this.currentUser = auth;
+      }
+      else{ this.currentUser = null;
+      }
+    });
    }
 
  

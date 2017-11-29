@@ -8,6 +8,7 @@ import {MatButtonModule, MatCheckboxModule, MatIconModule} from '@angular/materi
 import {MatCardModule} from '@angular/material';
 
 
+import 'firebase/storage';
 import { AngularFireModule } from 'angularfire2';
 // New imports to update based on AngularFire2 version 4
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -25,6 +26,12 @@ import { ProfileChangeComponent } from './profile-change/profile-change.componen
 import { MenuComponent } from './menu/menu.component';
 import { UploadFormComponent } from './uploads/upload-form/upload-form.component';
 import { UploadService } from './uploads/shared/upload.service';
+import { UploadDetailComponent } from './uploads/upload-detail/upload-detail.component';
+import { UploadListComponent } from './uploads/upload-list/upload-list.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { FooterComponent } from './footer/footer.component';
+
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyA81fDc8UMgsBf04ay-HN-ICV2VLepyTrI",
@@ -44,7 +51,11 @@ export const firebaseConfig = {
     ProfileChangeComponent,
     MenuComponent,
     UploadFormComponent,
-    
+    UploadDetailComponent,
+    UploadListComponent,
+    CarouselComponent,
+    FooterComponent
+  
   ],
   imports: [
     BrowserModule,

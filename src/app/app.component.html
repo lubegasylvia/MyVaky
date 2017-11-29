@@ -1,5 +1,12 @@
-<div class= "form-container" id="toolbar"> 
-    <h2>{{title}}</h2>  
-    <app-menu></app-menu>      
-    <router-outlet></router-outlet> 
+<div id="app-background">
+    <app-carousel></app-carousel>
+</div>
+<div id="app-wrapper">
+    <div class="form-container {{ isLoggedIn ? 'big-form-container' : 'small-form-container' }}" id="toolbar">
+        <h2>{{title}}</h2>  
+        <app-menu></app-menu>      
+        <router-outlet></router-outlet> 
+    
+    </div>
+    <app-footer></app-footer>
 </div>

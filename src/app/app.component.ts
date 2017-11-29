@@ -11,9 +11,18 @@ import * as firebase from 'firebase/app';
 export class AppComponent {
   title = 'MyVaKy';
   user: Observable<firebase.User>;
+  isLoggedIn:boolean = false;
 
   constructor(public afAuth: AngularFireAuth) {
     this.user = this.afAuth.authState;
+
+    this.afAuth.auth.onAuthStateChanged(auth => {
+      if(auth){
+        this.isLoggedIn = true;
+      }
+      else{ this.isLoggedIn = false;
+      }
+    });
   }
 
   login() {

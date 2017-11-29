@@ -1,37 +1,11 @@
- #toolbar {
-    padding:0;
-    width:60%;
-     margin-left:-35%; 
-} 
-
-.basic-btn {
-    width:200px; 
-    margin-top:0.5em;
-    margin-left:2em;
-    padding: 1em;
-    
-} 
-
-#page {
-    padding:3em;
-    margin:0;
-}
-
-h3{
-    font-size: 20px;
-    color: wheat;
-    font-family:"Times New Roman", Georgia, serif;
-    /* text-align: center; */
-}
-h2 {
+ h2 {
     margin: 0;
     padding-left:1em;
     font-size: 24px;
     font-family:"Times New Roman", Georgia, serif; 
     background-color: wheat;
-    color: #00bcd4;
-    /* text-align: center;  */
-}
+    color: #00bcd4;  
+} 
 
 
 @media (max-width: 600px) {

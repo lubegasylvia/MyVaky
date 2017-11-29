@@ -1,22 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 body {
     background:#E2E4E6;
-    padding-top:4em;
+    padding-top:2em;
+ 
 }
 a{
     color:#84d2f6;
 }
-.form-container {
-    background:#e57373;
-    padding:2em;
-    width:50%;
-    position:fixed;  
-    left:30%;  
-    margin-left:-250px;  
-    border-radius: 10px; 
-  
-}
+
 button {
      padding:1em;  
     font-size: 1em;
@@ -30,6 +23,8 @@ button {
     color:white;
     box-shadow: 0 4px #cf211f;
     border-radius: 2em;
+    font-size: 10px;
+    font-weight: 900px;
  }
  :hover {
     color:wheat;
