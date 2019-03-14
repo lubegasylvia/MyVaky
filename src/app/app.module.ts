@@ -18,18 +18,18 @@ import { AuthGuard } from './auth.service';
 import { routes } from './app.rout';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './main/components/login/login.component';
 import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileChangeComponent } from './profile-change/profile-change.component';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './main/components/menu/menu.component';
 import { UploadFormComponent } from './uploads/upload-form/upload-form.component';
 import { UploadService } from './uploads/shared/upload.service';
 import { UploadDetailComponent } from './uploads/upload-detail/upload-detail.component';
 import { UploadListComponent } from './uploads/upload-list/upload-list.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './main/components/footer/footer.component';
 
 
 

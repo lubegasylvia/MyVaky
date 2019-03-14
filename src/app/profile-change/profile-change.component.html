@@ -1,20 +1,33 @@
 
+<div *ngIf="currentUpload">
+  <div class="progress">
+    <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+  </div>
+    Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+  </div>
+  <label>
+    <input type="file" (change)="detectFiles($event)">
+  </label>
+  <button
+      [disabled]="!selectedFiles"
+      (click)="uploadSingle()">
+      Upload Single
+  </button>
+
 <h3>Your Profile</h3>
 <h2>Hi {{ currentUser.displayName}}!</h2>
 <h2>Hi {{ currentUser.email}}!</h2>
-<h2>Hi {{ currentUser.photoUrl}}!</h2>
+<h2>Hi {{ currentUser.photoURL}}!</h2>
 
 <h3>Change Your Profile</h3>
 <span class="error" *ngIf="error">{{ error }}</span>
 <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
 
   <input type="text" placeholder="YouName" (ngModel)="formData.name" name="name" class="txt" required>
-  <input type="text" placeholder="PofilePicture" (ngModel)="formData.pictureUrl" name="pictureUrl" class="txt" required>
-
   <button type="submit" [disabled]="!formData.form.valid" class="basic-btn">Save Profile</button>
 </form>
 
-<uploads-list></uploads-list>
+
 
 
 

@@ -3,6 +3,7 @@ import * as firebase from 'firebase/app';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Upload } from './upload';
 import { Observable } from 'rxjs/Observable';
+import { storage } from 'firebase/app';
 
 @Injectable()
 export class UploadService {
@@ -26,9 +27,14 @@ export class UploadService {
     return this.uploads
   }
 
-  pushUpload(upload: Upload) {
+  pushUpload(upload: Upload, path?: string, saveFunction?: any) {
+    let storagePath = `${this.basePath}/${upload.file.name}`;
+    if(path != null) {
+      storagePath = path;
+    }
+
     let storageRef = firebase.storage().ref();
-    let uploadTask = storageRef.child(`${this.basePath}/${upload.file.name}`).put(upload.file);
+    let uploadTask = storageRef.child(storagePath).put(upload.file);
     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
       (snapshot) =>  {
         upload.progress = (uploadTask.snapshot.bytesTransferred / uploadTask.snapshot.totalBytes) * 100;
@@ -43,7 +49,13 @@ export class UploadService {
         // upload success
         upload.url = uploadTask.snapshot.downloadURL
         upload.name = upload.file.name
-        this.saveFileData(upload)
+       
+        if (saveFunction != null) {
+          saveFunction(upload)
+        }
+        else{
+          this.saveFileData(upload);
+        }
       }
     );
   }

@@ -12,13 +12,13 @@ import { Observable } from 'rxjs/Observable';
 export class UploadListComponent implements OnInit {
 
   uploads: Observable<Upload[]>;
-  showSpinner = true;
+  // showSpinner = true;
 
   constructor(private upSvc: UploadService) { }
 
   ngOnInit() {
     this.uploads = this.upSvc.getUploads()
-    this.uploads.subscribe(() => this.showSpinner = false)
+    // this.uploads.subscribe(() => this.showSpinner = false)
   }
 
 

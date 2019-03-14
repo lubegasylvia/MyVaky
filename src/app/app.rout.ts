@@ -2,7 +2,7 @@ import { ModuleWithProviders, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './main/components/login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './auth.service';
 import { SignupComponent } from './signup/signup.component';
